@@ -22,7 +22,7 @@
 
 
          <sonar.organization>lucasandreani</sonar.organization>
-         <sonar.projectKey>/*Nombre de su organizacion*/_/*Nombre del proyecto*/</sonar.projectKey>
+         <sonar.projectKey>LucasAndreani_calidad-de-software-tp1</sonar.projectKey>
 
         <sonar.coverage.jacoco.xmlReportPaths>
             ${project.build.directory}/site/jacoco/jacoco.xml
