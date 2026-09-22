@@ -95,11 +95,5 @@ public class Libro {
         return "Libro prestado correctamente";
     }
 
-    public void testSonar() {
-    if (true) {
-        System.out.println("test");
-    }
-}
-
 }
 
