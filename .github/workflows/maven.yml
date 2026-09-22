@@ -42,4 +42,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B clean verify sonar:sonar
+        run: |
+          pwd
+          echo "=== FILES ==="
+          find . -type f | sort
+          echo "=== MAVEN ==="
+          mvn -B clean verify sonar:sonar
