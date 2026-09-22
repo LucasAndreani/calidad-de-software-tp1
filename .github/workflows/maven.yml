@@ -40,5 +40,6 @@ jobs:
       - name: Build and analyze
         working-directory: ./calidad-biblioteca2
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=LucasAndreani_calidad-de-software-tp1
+        run: mvn -B clean verify sonar:sonar
