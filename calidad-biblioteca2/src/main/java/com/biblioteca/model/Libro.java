@@ -10,9 +10,7 @@ public class Libro {
     private Long id;
 
     private String titulo;
-
     private String autor;
-
     private boolean prestado;
 
     public Libro() {
@@ -70,19 +68,7 @@ public class Libro {
 
     public String prestar() {
 
-        if (titulo == null) {
-            return "No se puede prestar";
-        }
-
-        if (titulo.isEmpty()) {
-            return "No se puede prestar";
-        }
-
-        if (autor == null) {
-            return "No se puede prestar";
-        }
-
-        if (autor.isEmpty()) {
+        if (datosIncompletos()) {
             return "No se puede prestar";
         }
 
@@ -91,9 +77,14 @@ public class Libro {
         }
 
         prestado = true;
-
         return "Libro prestado correctamente";
     }
 
-}
+    private boolean datosIncompletos() {
+        return esVacio(titulo) || esVacio(autor);
+    }
 
+    private boolean esVacio(String valor) {
+        return valor == null || valor.isBlank();
+    }
+}
