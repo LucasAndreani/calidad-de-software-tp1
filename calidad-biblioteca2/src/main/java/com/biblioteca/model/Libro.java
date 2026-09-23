@@ -1,4 +1,3 @@
-```java
 package com.biblioteca.model;
 
 import jakarta.persistence.*;
@@ -81,4 +80,4 @@ public class Libro {
         return valor == null || valor.isBlank();
     }
 }
-```
+
