@@ -1,3 +1,4 @@
+```java
 package com.biblioteca.model;
 
 import jakarta.persistence.*;
@@ -25,14 +26,6 @@ public class Libro {
     // --- GETTERS ---
 
     public Long getId() {
-        return id;
-    }
-
-    public Long getId2() {
-        return id;
-    }
-
-    public Long getId3() {
         return id;
     }
 
@@ -88,3 +81,4 @@ public class Libro {
         return valor == null || valor.isBlank();
     }
 }
+```
